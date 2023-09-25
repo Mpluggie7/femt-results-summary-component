@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700;800&display=swap");
+
+:root {
+  --Light_red: hsl(0, 100%, 67%);
+  --Light_red_op: hsl(0, 100%, 98%);
+  --Light_red_op2: hsl(0, 100%, 88%);
+  --Orangey_yellow: hsl(39, 100%, 56%);
+  --Orangey_yellow_op: hsl(39, 100%, 97%);
+  --Orangey_yellow_op2: hsl(39, 100%, 87%);
+  --Green_teal: hsl(166, 100%, 37%);
+  --Green_teal_op: hsl(166, 100%, 97%);
+  --Green_teal_op2: hsl(166, 100%, 87%);
+  --Cobalt_blue: hsl(234, 85%, 45%);
+  --Cobalt_blue_op: hsl(234, 85%, 98%);
+  --Cobalt_blue_op2: hsl(234, 85%, 88%);
+
+  --Light_slate_blue: hsl(252, 100%, 67%);
+  --Light_royal_blue: hsl(241, 81%, 54%);
+
+  --Violet_blue: hsla(256, 72%, 46%, 1);
+  --Persian_blue: hsla(241, 72%, 46%, 0);
+
+  --White: hsl(0, 0%, 100%);
+  --Pale_blue: hsla(221, 100%, 96%, 0.6);
+  --Pale_blue_op: hsla(221, 100%, 76%, 0.3);
+  --Light_lavender: hsl(241, 100%, 89%);
+  --Dark_gray_blue: hsl(224, 30%, 27%);
+  --Dark_gray_blue_op: hsla(224, 30%, 27%, 0.3);
+}
+
+body {
+  font-family: "Hanken Grotesk", sans-serif;
+  margin: 0;
+  background-color: var(--White);
+}
+
+p {
+  font-size: 18px;
+  margin: 0;
+}
+
+.whiteFrame {
+  border-radius: 30px;
+}
+
+.resultBlock {
+  width: 100%;
+  box-sizing: border-box;
+  background-image: linear-gradient(
+    var(--Light_slate_blue),
+    var(--Light_royal_blue)
+  );
+  padding: 24px 48px;
+  border-radius: 0 0 30px 30px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.headResult {
+  color: var(--Pale_blue);
+}
+
+.circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  background-image: linear-gradient(var(--Violet_blue), var(--Persian_blue));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.score76 {
+  font-size: 64px;
+  color: var(--White);
+  margin: 0;
+}
+
+.of100 {
+  color: var(--Pale_blue);
+}
+
+.great {
+  font-size: 36px;
+  font-weight: 500;
+  color: var(--White);
+  margin-bottom: 0;
+}
+
+.detail {
+  text-align: center;
+  color: var(--Pale_blue);
+}
+
+.summaryBlock {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 36px;
+}
+
+.scoreBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.eachBlock {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.type {
+  font-weight: 700;
+  display: flex;
+  gap: 0 8px;
+}
+
+.score {
+  font-weight: 700;
+}
+
+.score span {
+  color: var(--Dark_gray_blue_op);
+}
+
+.eachBlock_red {
+  background-color: var(--Light_red_op);
+}
+.eachBlock_red:hover {
+  background-color: var(--Light_red_op2);
+}
+
+.type_red {
+  color: var(--Light_red);
+}
+
+.eachBlock_yellow {
+  background-color: var(--Orangey_yellow_op);
+}
+.eachBlock_yellow:hover {
+  background-color: var(--Orangey_yellow_op2);
+}
+
+.type_yellow {
+  color: var(--Orangey_yellow);
+}
+
+.eachBlock_green {
+  background-color: var(--Green_teal_op);
+}
+.eachBlock_green:hover {
+  background-color: var(--Green_teal_op2);
+}
+
+.type_green {
+  color: var(--Green_teal);
+}
+
+.eachBlock_blue {
+  background-color: var(--Cobalt_blue_op);
+}
+.eachBlock_blue:hover {
+  background-color: var(--Cobalt_blue_op2);
+}
+
+.type_blue {
+  color: var(--Cobalt_blue);
+}
+
+button {
+  width: 100%;
+  padding: 16px 16px;
+  background-color: var(--Dark_gray_blue);
+  color: var(--White);
+  border-radius: 56px;
+  font-weight: 400;
+  margin: 28px 0;
+}
+button:hover {
+  background-image: linear-gradient(
+    var(--Light_slate_blue),
+    var(--Light_royal_blue)
+  );
+}
+
+/* 
+Mobile: 375px
+Desktop: 1440px
+*/
+@media (min-width: 567px) {
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .whiteFrame {
+    display: flex;
+    box-shadow: 5px 5px 20px var(--Pale_blue_op);
+  }
+
+  .resultBlock {
+    width: 360px;
+    border-radius: 30px;
+  }
+
+  .summaryBlock {
+    width: 360px;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin: 16px 0;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
